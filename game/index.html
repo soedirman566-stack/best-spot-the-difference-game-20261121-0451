@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Views — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-left">
+      <div id="game-title">👀 Twin Views</div>
+      <div id="level-name">Sunny Cove Market</div>
+    </div>
+    <div id="counter-box">
+      <div id="counter-number">5</div>
+      <div id="counter-label">differences left</div>
+    </div>
+    <div class="hud-right">
+      <div id="timer-box">
+        <div id="timer-text">2:00</div>
+        <div id="timer-track"><div id="timer-fill"></div></div>
+      </div>
+      <div id="score-box">Score <span id="score-number">0</span></div>
+      <button id="hint-button" type="button">💡 Hint (<span id="hint-count">2</span>)</button>
+    </div>
+  </header>
+
+  <main id="stage">
+    <figure class="panel-wrap">
+      <canvas id="panel-left" width="560" height="420"></canvas>
+      <figcaption>Original</figcaption>
+    </figure>
+    <figure class="panel-wrap">
+      <canvas id="panel-right" width="560" height="420"></canvas>
+      <figcaption>Spot the changes</figcaption>
+    </figure>
+    <div id="miss-flash"></div>
+  </main>
+
+  <footer id="tip">Click a difference on either picture. A wrong click costs 5 seconds!</footer>
+
+  <div id="overlay">
+    <div id="overlay-card">
+      <h1 id="overlay-title">Twin Views</h1>
+      <p id="overlay-body"></p>
+      <div id="overlay-stats"></div>
+      <button id="overlay-button" type="button">Start hunting</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
